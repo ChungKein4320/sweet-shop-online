@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang chủ - Sweet shop</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.css" />
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="header">
+                <header class="main-header p-3">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <img src="../assets/images/logo.jpg" alt="Bán hàng Online K-Sweet" class="rounded-circle width-110px" />
+                    </div>
+                    <div class="mid-action d-flex flex-column justify-content-center align-items-center">
+                        <div class="search-bar input-group w-75 mb-2">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                            <button class="btn search-btn" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="policy-search">
+                            <ul>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_1_ico.webp" />
+                                    <span>Đảm bảo chất lượng</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_2_ico.webp" />
+                                    <span>Hotline 0912345678</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_3_ico.webp" />
+                                    <span>Mở hộp kiểm tra nhận hàng</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-action d-flex align-items-center gap-3">
+                        <a href="#" id="cart" class="icon" data-require-login="true">
+                            <i class="bi bi-cart3"></i>
+                            <span class="p-2">Giỏ hàng</span>
+                        </a>
+                        <a href="#" id="user" class="icon" data-require-login="true">
+                            <i class="bi bi-person-circle"></i>
+                            <span class="p-2">Đăng nhập / Đăng ký</span>
+                        </a>
+                        <a href="#" id="notify" class="icon" data-require-login="true">
+                            <i class="bi bi-bell"></i>
+                            <span class="p-2">Thông báo</span>
+                        </a>
+                    </div>
+                </header>
+                <div class="nav d-flex justify-content-center align-items-center">
+                    <nav class="menu">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="#">TRANG CHỦ</a></li>
+                            <li><a href="#">VỀ K-SWEET</a></li>
+                            <li><a href="#">SẢN PHẨM</a></li>
+                            <li><a href="#">KHUYẾN MÃI</a></li>
+                            <li><a href="#">TIN TỨC</a></li>
+                            <li><a href="#">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="layout-account d-flex justify-content-center align-items-center flex-column">
+                <div class="form mt-5">
+                    <div class="sel d-flex justify-content-center align-items-center mt-5">
+                        <a href="../pages/login.html" class="sel-item active">Đăng nhập</a>
+                        <a href="../pages/register.html" class="sel-item">Đăng ký</a>
+                    </div>
+                    <div class="form-item d-flex flex-column justify-content-center align-items-center">
+                        <input type="text" placeholder="Vui lòng nhập email của bạn" />
+                        <input type="password" placeholder="Vui lòng nhập mật khẩu" />
+                    </div>
+                    <p>
+                        This site protected by reCAPCHA and the Google <a href="https://policies.google.com/privacy">Privacy</a> and
+                        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+                    </p>
+                    <div class="form-action d-flex justify-content-center align-items-center flex-column">
+                        <button type="button">Đăng nhập</button>
+                        <p class="m-3">Bạn chưa có tài khoản? <a href="../pages/register.html">Đăng ký</a></p>
+                        <p class="m-0">Bạn quên mật khẩu? <a href="#">Quên mật khẩu</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/script.js"></script>
+    </body>
+</html>

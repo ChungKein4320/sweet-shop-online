@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.css" />
     </head>
     <body>
         <div class="main-body">
@@ -22,15 +23,53 @@
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
-                        <div><input type="text" class="form-control"></div>
+                        <div class="policy-search">
+                            <ul>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_1_ico.webp" />
+                                    <span>Đảm bảo chất lượng</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_2_ico.webp" />
+                                    <span>Hotline 0912345678</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_3_ico.webp" />
+                                    <span>Mở hộp kiểm tra nhận hàng</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="right-action"></div>
+                    <div class="right-action d-flex align-items-center gap-3">
+                        <a href="#" id="cart" class="icon" data-require-login="true">
+                            <i class="bi bi-cart3"></i>
+                            <span class="p-2">Giỏ hàng</span>
+                        </a>
+                        <a href="#" id="user" class="icon" data-require-login="true">
+                            <i class="bi bi-person-circle"></i>
+                            <span class="p-2">Đăng nhập / Đăng ký</span>
+                        </a>
+                        <a href="#" id="notify" class="icon" data-require-login="true">
+                            <i class="bi bi-bell"></i>
+                            <span class="p-2">Thông báo</span>
+                        </a>
+                    </div>
                 </header>
-                <div class="nav">
-                    <nav class="menu"></nav>
+                <div class="nav d-flex justify-content-center align-items-center">
+                    <nav class="menu">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="#">TRANG CHỦ</a></li>
+                            <li><a href="#">VỀ K-SWEET</a></li>
+                            <li><a href="#">SẢN PHẨM</a></li>
+                            <li><a href="#">KHUYẾN MÃI</a></li>
+                            <li><a href="#">TIN TỨC</a></li>
+                            <li><a href="#">LIÊN HỆ</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/script.js"></script>
     </body>
 </html>
