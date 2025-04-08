@@ -140,7 +140,60 @@
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.footer {
+    padding: 30px;
+    margin: 0 50px;
+}
+
+h3 {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.footer-newsletter-left input {
+    width: 290px;
+    height: 40px;
+    border-radius: 999px;
+    padding-left: 40px;
+    margin-right: 20px;
+}
+
+.footer-newsletter-left i {
+    position: absolute;
+    left: 0;
+    margin-left: 230px;
+    font-size: 20px;
+}
+
+.footer-newsletter-left button {
+    background-color: #D93932;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+}
+
+.footer-newsletter-left {
+    position: relative;
+}
+
+.footer-newsletter {
+    position: relative;
+}
+
+.footer-newsletter-right {
+    position: absolute;
+    right: 0;
+}
+
+.footer-newsletter-right a i {
+    font-size: 20px;
+    margin-right: 20px;
 }
