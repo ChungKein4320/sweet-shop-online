@@ -1,0 +1,30 @@
+.logo img {
+    width: 120px;
+    height: 75px;
+}
+
+.main-header {
+    background-color: #AD211E;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.search-btn {
+    background-color: #D93932;
+    color: white;
+    width: 70px;
+    border: none;
+    margin: 5px;
+    position: absolute;
+    right: 0;
+}
+
+.search-bar input {
+    position: relative;
+    width: 100%;
+    padding: 22px;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+}
+
