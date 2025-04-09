@@ -128,7 +128,7 @@
     text-decoration: none;
 }
 
-.form-item input {
+.form-item input:not(.gender) {
     width: 800px;
     height: 55px;
     margin: 20px;
@@ -161,6 +161,8 @@
 h3 {
     font-weight: bold;
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-newsletter-left input {
@@ -212,18 +214,53 @@ h3 {
     width: 100%;
     margin-top: 20px; 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid black;
 }
 
-.list-pay img {
+.list-pay img, .list-transport img{
     padding: 10px;
 }
 
-.item-3 a {
+.item-4 a {
     color: black;
     text-decoration: none;
 }
 
-.item-3 a:hover {
+.item-4 a:hover {
     color: #D93932;
 }
+
+.item-4 ul {
+    list-style-type: none;
+}
+
+.item-4 ul li {
+    margin: 10px 0;
+}
+
+.radio {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.radio label {
+    margin: 0;
+    padding: 10px;
+}
+
+.radio input {
+    width: 20px;;
+    height: 20px;
+}
+
+.radio input[type="radio"] {
+    accent-color: #D93932;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    width: 100%;
+}
+
