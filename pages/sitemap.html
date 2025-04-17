@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Đăng ký - Sweet shop</title>
+        <title>Sitemap - Sweet shop</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../assets/css/all.min.css" />
         <link rel="stylesheet" href="../assets/css/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../assets/css/sitemap.css" />
     </head>
     <body>
         <div class="main-body">
@@ -70,37 +71,50 @@
                 </div>
             </div>
             <!-- End Header -->
-            <div class="layout-account d-flex justify-content-center align-items-center flex-column">
-                <div class="form mt-5">
-                    <div class="sel d-flex justify-content-center align-items-center mt-5">
-                        <a href="../pages/login.html" class="sel-item">Đăng nhập</a>
-                        <a href="../pages/register.html" class="sel-item active">Đăng ký</a>
+
+            <div class="container sitemap-container">
+                <h1>WELCOME TO K-SWEET</h1>
+                <div class="sitemap-list">
+                    <div class="sitemap-item">
+                        <i class="fas fa-home"></i>
+                        <a href="../pages/index.html">Trang chủ</a>
                     </div>
-                    <div class="form-item d-flex flex-column justify-content-center align-items-center">
-                        <input type="text" placeholder="Họ" />
-                        <input type="text" placeholder="Tên" />
-                        <div class="radio">
-                            <input class="gender" type="radio" id="male" name="gender" value="Nam" />
-                            <label for="male">Nam</label>
-                            <input class="gender" type="radio" id="female" name="gender" value="Nữ" />
-                            <label for="female">Nữ</label>
-                        </div>
-                        <input type="text" placeholder="dd/mm/yyyy" />
-                        <input type="text" placeholder="Email" />
-                        <input type="text" placeholder="Mật khẩu" />
+                    <div class="sitemap-item">
+                        <i class="fas fa-user-plus"></i>
+                        <a href="../pages/register.html">Đăng ký</a>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                        <p>
-                            This site protected by reCAPCHA and the Google <a href="https://policies.google.com/privacy">Privacy</a> and
-                            <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-                        </p>
+                    <div class="sitemap-item">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <a href="../pages/login.html">Đăng nhập</a>
                     </div>
-                    <div class="form-action d-flex justify-content-center align-items-center flex-column">
-                        <button type="button">ĐĂNG KÝ</button>
-                        <p class="m-3">Bạn đã có tài khoản? <a href="../pages/login.html">Đăng nhập ngay</a></p>
+                    <div class="sitemap-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <a href="../html/cart.html">Giỏ hàng</a>
+                    </div>
+                    <div class="sitemap-item">
+                        <i class="bi bi-file-person-fill"></i>
+                        <a href="../pages/about.html">Về K-Sweet</a>
+                    </div>
+                    <div class="sitemap-item">
+                        <i class="fas fa-box-open"></i>
+                        <a href="../pages/products.html">Sản phẩm</a>
+                    </div>
+                    <div class="sitemap-item">
+                        <i class="fas fa-newspaper"></i>
+                        <a href="../pages/news.html">Bài viết</a>
+                    </div>
+                    <div class="sitemap-item">
+                        <i class="fas fa-heart"></i>
+                        <a href="../pages/fav.html">Yêu thích</a>
+                    </div>
+                    <div class="sitemap-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="../pages/contact.html">Liên hệ</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Footer -->
             <div class="footer">
                 <div class="footer-newsletter d-flex">
                     <div class="footer-newsletter-left d-flex align-items-center">
@@ -161,6 +175,7 @@
                             <li><a href="#">Khuyến Mãi</a></li>
                             <li><a href="#">Tin Tức</a></li>
                             <li><a href="#">Liên Hệ</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -168,6 +183,7 @@
                     <p>Copyright &copy; 2023 - Bản quyền của Bán hàng Online K-Sweet</p>
                 </div>
             </div>
+            <!-- End Footer -->
         </div>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>

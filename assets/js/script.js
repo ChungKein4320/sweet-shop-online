@@ -20,3 +20,14 @@ document.querySelectorAll(".icon").forEach((link) => {
         }
     });
 });
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+  slides[currentIndex].style.display = "none";
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides[currentIndex].style.display = "block";
+}
+
+setInterval(showNextSlide, 3000); // 2 giây

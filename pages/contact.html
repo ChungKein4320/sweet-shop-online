@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Đăng ký - Sweet shop</title>
+        <title>Liên hệ - Sweet shop</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../assets/css/all.min.css" />
         <link rel="stylesheet" href="../assets/css/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../assets/css/contact.css" />
     </head>
     <body>
         <div class="main-body">
@@ -70,37 +71,70 @@
                 </div>
             </div>
             <!-- End Header -->
-            <div class="layout-account d-flex justify-content-center align-items-center flex-column">
-                <div class="form mt-5">
-                    <div class="sel d-flex justify-content-center align-items-center mt-5">
-                        <a href="../pages/login.html" class="sel-item">Đăng nhập</a>
-                        <a href="../pages/register.html" class="sel-item active">Đăng ký</a>
-                    </div>
-                    <div class="form-item d-flex flex-column justify-content-center align-items-center">
-                        <input type="text" placeholder="Họ" />
-                        <input type="text" placeholder="Tên" />
-                        <div class="radio">
-                            <input class="gender" type="radio" id="male" name="gender" value="Nam" />
-                            <label for="male">Nam</label>
-                            <input class="gender" type="radio" id="female" name="gender" value="Nữ" />
-                            <label for="female">Nữ</label>
+
+            <!-- Main Content -->
+            <section class="contact">
+                <div class="container">
+                    <div class="row mt-4 mb-50 pc">
+                        <div class="col-12 contact__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.858169091015!2d106.68427047355254!3d10.822164158351429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1730982763616!5m2!1svi!2s"
+                                height="200"
+                                width="100%"
+                                frameborder="0"
+                                style="border: 0"
+                                allowfullscreen=""
+                                aria-hidden="false"
+                                tabindex="0"
+                            ></iframe>
                         </div>
-                        <input type="text" placeholder="dd/mm/yyyy" />
-                        <input type="text" placeholder="Email" />
-                        <input type="text" placeholder="Mật khẩu" />
                     </div>
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                        <p>
-                            This site protected by reCAPCHA and the Google <a href="https://policies.google.com/privacy">Privacy</a> and
-                            <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-                        </p>
-                    </div>
-                    <div class="form-action d-flex justify-content-center align-items-center flex-column">
-                        <button type="button">ĐĂNG KÝ</button>
-                        <p class="m-3">Bạn đã có tài khoản? <a href="../pages/login.html">Đăng nhập ngay</a></p>
+
+                    <div class="row mt-4 mb-4">
+                        <div class="col-lg-6 col-md-6 col-sm-12 contact__self">
+                            <h3 class="mb-4">Liên hệ với chúng tôi</h3>
+                            <p>
+                                Tại K-Sweet, sự hài lòng của bạn chính là niềm vui và động lực để chúng tôi ngày càng hoàn thiện hơn. Nếu bạn có bất kỳ câu hỏi, góp ý hay đơn giản chỉ muốn chia sẻ cảm
+                                nhận sau khi thưởng thức những chiếc kẹo ngọt ngào từ K-Sweet, đừng ngần ngại liên hệ với chúng tôi. Mọi ý kiến của bạn đều rất quý giá và sẽ được phản hồi trong thời
+                                gian sớm nhất.
+                            </p>
+                            <h3 class="mt-4 mb-4">Thông tin liên hệ</h3>
+
+                            <ul class="contact__self-list">
+                                <li class="contact__self-item">
+                                    <a class="contact__self-link" href="#">ksweet.com</a>
+                                </li>
+                                <li class="contact__self-item">
+                                    <a class="contact__self-link" href="#">SĐT: 0912.345.678</a>
+                                </li>
+                                <li class="contact__self-item">
+                                    <a class="contact__self-link" href="#">Email: 0912345678</a>
+                                </li>
+                                <li class="contact__self-item">
+                                    <a class="contact__self-link" href="#">Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TP.HCM</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 contact__regist">
+                            <h3 class="mb-4">Đăng ký tư vấn miễn phí</h3>
+
+                            <p>Quý khách vui lòng để lại thông tin để nhân viên tư vấn điện lại cho bạn sớm nhất!</p>
+
+                            <form>
+                                <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Họ tên của bạn..." />
+
+                                <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email của bạn..." />
+
+                                <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Số điện thoại..." />
+
+                                <textarea name="" id="" cols="200" rows="15" placeholder="Nội dung cần tư vấn..."></textarea>
+                                <button type="submit">Gửi liên hệ</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
             <div class="footer">
                 <div class="footer-newsletter d-flex">
                     <div class="footer-newsletter-left d-flex align-items-center">

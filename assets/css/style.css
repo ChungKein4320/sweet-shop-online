@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .logo img {
@@ -12,13 +12,13 @@
 }
 
 .main-header {
-    background-color: #AD211E;
+    background-color: #ad211e;
     display: grid;
     grid-template-columns: 20% 50% 30%;
 }
 
 .search-btn {
-    background-color: #D93932;
+    background-color: #d93932;
     color: white;
     width: 70px;
     border: none;
@@ -73,12 +73,12 @@
 }
 
 .nav {
-    background-color: #D93932;
+    background-color: #d93932;
     height: 61px;
 }
 
 .nav ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 .nav ul li {
@@ -95,7 +95,7 @@
 }
 
 .layout-account {
-    background-color: #F6F3EA;
+    background-color: #f6f3ea;
     padding-bottom: 40px;
 }
 
@@ -107,7 +107,7 @@
 
 .sel-item {
     font-size: 25px;
-    color: #CACACA;
+    color: #cacaca;
     padding: 0 30px;
     font-weight: bold;
 }
@@ -117,7 +117,7 @@
 }
 
 .sel a:hover {
-    color: black
+    color: black;
 }
 
 .active {
@@ -132,7 +132,7 @@
     width: 800px;
     height: 55px;
     margin: 20px;
-    background-color: #EDEDED;
+    background-color: #ededed;
     border: none;
     padding-left: 20px;
     font-style: italic;
@@ -143,7 +143,7 @@
 }
 
 .form-action button {
-    background-color: #D93932;
+    background-color: #d93932;
     color: white;
     padding: 10px;
     border: none;
@@ -169,7 +169,7 @@ h3 {
     width: 290px;
     height: 40px;
     border-radius: 999px;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-right: 20px;
 }
 
@@ -181,7 +181,7 @@ h3 {
 }
 
 .footer-newsletter-left button {
-    background-color: #D93932;
+    background-color: #d93932;
     color: white;
     width: 120px;
     height: 40px;
@@ -212,13 +212,14 @@ h3 {
 
 .footer-expand-collapsed {
     width: 100%;
-    margin-top: 20px; 
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid black;
 }
 
-.list-pay img, .list-transport img{
+.list-pay img,
+.list-transport img {
     padding: 10px;
 }
 
@@ -228,7 +229,7 @@ h3 {
 }
 
 .item-4 a:hover {
-    color: #D93932;
+    color: #d93932;
 }
 
 .item-4 ul {
@@ -251,12 +252,12 @@ h3 {
 }
 
 .radio input {
-    width: 20px;;
+    width: 20px;
     height: 20px;
 }
 
 .radio input[type="radio"] {
-    accent-color: #D93932;
+    accent-color: #d93932;
     cursor: pointer;
 }
 
@@ -264,3 +265,25 @@ h3 {
     width: 100%;
 }
 
+.slideshow {
+    position: relative;
+    width: 80%;
+    max-height: 650px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    width: 100%;
+    display: none;
+    object-fit: cover;
+  }
+  
+
+  .slide:first-child {
+    display: block;
+  }
+
+  .section-1 {
+    background-color: #F6F3EA;
+  }
+  

@@ -1,0 +1,71 @@
+.about-section {
+    text-align: center;
+    background-color: #EFF0F3;
+    padding: 40px 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #D93932;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #444;
+    font-size: 16px;
+}
+
+.mission {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.mission > div {
+    max-width: 300px;
+}
+
+.mission img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.mission h4 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.mission p {
+    font-size: 14px;
+    color: #666;
+}
+
+.core-values ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.core-values li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+}
+
+.core-values i {
+    color: #D93932;
+    font-size: 20px;
+}
