@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang chủ - Sweet shop</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/css/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../assets/css/post.css" />
+    </head>
+    <body>
+        <div class="main-body">
+            <!-- Header -->
+            <div class="header">
+                <header class="main-header p-3">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <img src="../assets/images/logo.jpg" alt="Bán hàng Online K-Sweet" class="rounded-circle width-110px" />
+                    </div>
+                    <div class="mid-action d-flex flex-column justify-content-center align-items-center">
+                        <div class="search-bar input-group w-75 mb-2">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                            <button class="btn search-btn" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="policy-search">
+                            <ul>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_1_ico.webp" />
+                                    <span>Đảm bảo chất lượng</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_2_ico.webp" />
+                                    <span>Hotline 0912345678</span>
+                                </li>
+                                <li>
+                                    <img src="../assets/images/header_03_policy_3_ico.webp" />
+                                    <span>Mở hộp kiểm tra nhận hàng</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-action d-flex align-items-center gap-3">
+                        <a href="../pages/cart.html" id="cart" class="icon" data-require-login="true">
+                            <i class="bi bi-cart3"></i>
+                            <span class="p-2">Giỏ hàng</span>
+                        </a>
+                        <a href="../pages/login.html" id="user" class="icon" data-require-login="true">
+                            <i class="bi bi-person-circle"></i>
+                            <span class="p-2">Đăng nhập / Đăng ký</span>
+                        </a>
+                        <a href="#" id="notify" class="icon" data-require-login="true">
+                            <i class="bi bi-bell"></i>
+                            <span class="p-2">Thông báo</span>
+                        </a>
+                    </div>
+                </header>
+                <div class="nav d-flex justify-content-center align-items-center">
+                    <nav class="menu">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="../pages/index.html">TRANG CHỦ</a></li>
+                            <li><a href="../pages/about.html">VỀ K-SWEET</a></li>
+                            <li><a href="../pages/products.html">SẢN PHẨM</a></li>
+                            <li><a href="../pages/post.html">BÀI VIẾT</a></li>
+                            <li><a href="../pages/contact.html">LIÊN HỆ</a></li>
+                            <li><a href="../pages/sitemap.html">SITEMAP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Header -->
+
+            <!-- posts -->
+            <section class="posts">
+                <div class="container">
+                    <div class="row pc">
+                        <!-- <nav class="menu__nav col-lg-3 col-md-12 col-sm-0">
+                            <ul class="menu__list">
+                                <li class="menu__item menu__item--active">
+                                    <a href="#" class="menu__link">
+                                        <img
+                                            src="../img/item/baby-boy.png"
+                                            alt=""
+                                            class="menu__item-icon"
+                                            id="Capa_1"
+                                            enable-background="new 0 0 512 512"
+                                            height="512"
+                                            viewBox="0 0 512 512"
+                                            width="512"
+                                        />
+                                        Sách Tiếng Việt</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <img
+                                            src="../img/item/translation.png"
+                                            alt=""
+                                            class="menu__item-icon"
+                                            id="Capa_1"
+                                            enable-background="new 0 0 512 512"
+                                            height="512"
+                                            viewBox="0 0 512 512"
+                                            width="512"
+                                        />
+                                        Sách nước ngoài</a
+                                    >
+                                </li>
+
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <img src="../img/item/comic.png" alt="" class="menu__item-icon" viewBox="0 0 512 512" width="1012" height="512" />
+                                        Manga - Comic</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav> -->
+                        <!-- score-top-->
+
+                        <div class="breadcrumbs col-lg-12 col-md-12 col-sm-12">Trang chủ > <span class="breadcrumbs__active">Bài viết</span></div>
+                    </div>
+
+                    <div class="row">
+                        <article class="post__list col-lg-9 col-md-9 col-sm-12">
+                            <div class="post__item">
+                                <div class="post__item-img-wrap">
+                                    <img src="../assets/images/sale.png" class="post__item-img" />
+                                </div>
+
+                                <div class="post__item-content">
+                                    <div class="post__item-title">
+                                        <a href="#" class="post__item-link">
+                                            <h2 class="post__item-heading">Mẹo săn mã voucher giảm giá tại K-Sweet</h2>
+                                        </a>
+                                    </div>
+
+                                    <div class="posts__item-cate-wrap">
+                                        <div class="posts__item-cate">
+                                            <i class="fa fa-folder posts__item-cate-icon"></i>
+                                            <div class="posts__item-cate-name">Tin tức</div>
+                                        </div>
+                                        <div class="posts__item-cate-ad">
+                                            <i class="fa fa-user posts__item-cate-ad-icon"></i>
+                                            <div class="posts__item-cate-ad-name">K-Sweet</div>
+                                        </div>
+                                    </div>
+                                    <div class="posts__item-description">
+                                        Bạn yêu thích những món quà ngọt ngào từ K-Sweet nhưng lại muốn tiết kiệm hơn khi mua sắm? Đừng lo! Bài viết này sẽ chia sẻ đến bạn những mẹo và kinh nghiệm
+                                        giúp săn voucher giảm giá K-Sweet hiệu quả nhất. Từ các chương trình ưu đãi định kỳ đến những mã độc quyền, bạn sẽ dễ dàng bỏ túi những deal cực “ngọt” chỉ với
+                                        vài thao tác đơn giản.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post__item">
+                                <div class="post__item-img-wrap">
+                                    <img src="../assets/images/fake.jpg" class="post__item-img" />
+                                </div>
+
+                                <div class="post__item-content">
+                                    <div class="post__item-title">
+                                        <a href="#" class="post__item-link">
+                                            <h2 class="post__item-heading">Cách phân biệt bánh kẹo chính hãng K-Sweet</h2>
+                                        </a>
+                                    </div>
+
+                                    <div class="posts__item-cate-wrap">
+                                        <div class="posts__item-cate">
+                                            <i class="fa fa-folder posts__item-cate-icon"></i>
+                                            <div class="posts__item-cate-name">Tin tức</div>
+                                        </div>
+                                        <div class="posts__item-cate-ad">
+                                            <i class="fa fa-user posts__item-cate-ad-icon"></i>
+                                            <div class="posts__item-cate-ad-name">K-Sweet</div>
+                                        </div>
+                                    </div>
+                                    <div class="posts__item-description">
+                                        Để giúp khách hàng yên tâm lựa chọn và sử dụng sản phẩm chính hãng từ K-Sweet, chúng tôi chia sẻ một số cách nhận biết đơn giản. Hãy chú ý bao bì sản phẩm, tem
+                                        niêm phong và thông tin nhà sản xuất rõ ràng. Kẹo thật từ K-Sweet luôn có màu sắc tươi sáng, mùi vị đặc trưng và hạn sử dụng rõ ràng – cam kết mang đến trải
+                                        nghiệm tuyệt vời và an toàn cho người dùng.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post__item">
+                                <div class="post__item-img-wrap">
+                                    <img src="../assets/images/cachsd.png" class="post__item-img" />
+                                </div>
+
+                                <div class="post__item-content">
+                                    <div class="post__item-title">
+                                        <a href="#" class="post__item-link">
+                                            <h2 class="post__item-heading">Hướng dẫn sử dụng mã giảm giá K-Sweet</h2>
+                                        </a>
+                                    </div>
+
+                                    <div class="posts__item-cate-wrap">
+                                        <div class="posts__item-cate">
+                                            <i class="fa fa-folder posts__item-cate-icon"></i>
+                                            <div class="posts__item-cate-name">Tin tức</div>
+                                        </div>
+                                        <div class="posts__item-cate-ad">
+                                            <i class="fa fa-user posts__item-cate-ad-icon"></i>
+                                            <div class="posts__item-cate-ad-name">K-Sweet</div>
+                                        </div>
+                                    </div>
+                                    <div class="posts__item-description">
+                                        Bạn đã có mã giảm giá từ K-Sweet? Tuyệt vời! Giờ là lúc tận hưởng ưu đãi. K-Sweet cho phép bạn áp dụng nhiều loại mã khác nhau như: mã giảm giá sản phẩm, mã
+                                        miễn phí vận chuyển và mã từ đối tác thanh toán. Bài viết này sẽ hướng dẫn bạn cách nhập mã, điều kiện áp dụng và mẹo để tận dụng tối đa các ưu đãi trong cùng
+                                        một đơn hàng.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post__item">
+                                <div class="post__item-img-wrap">
+                                    <img src="../assets/images/child.webp" class="post__item-img" />
+                                </div>
+
+                                <div class="post__item-content">
+                                    <div class="post__item-title">
+                                        <a href="#" class="post__item-link">
+                                            <h2 class="post__item-heading">Góp kẹo cũ – Tặng nụ cười mới cho trẻ em vùng cao</h2>
+                                        </a>
+                                    </div>
+
+                                    <div class="posts__item-cate-wrap">
+                                        <div class="posts__item-cate">
+                                            <i class="fa fa-folder posts__item-cate-icon"></i>
+                                            <div class="posts__item-cate-name">Tin tức</div>
+                                        </div>
+                                        <div class="posts__item-cate-ad">
+                                            <i class="fa fa-user posts__item-cate-ad-icon"></i>
+                                            <div class="posts__item-cate-ad-name">K-Sweet</div>
+                                        </div>
+                                    </div>
+                                    <div class="posts__item-description">
+                                        Chương trình thiện nguyện “Góp kẹo – Gieo yêu thương” do K-Sweet tổ chức đã nhận được sự hưởng ứng nhiệt tình từ cộng đồng. Hàng trăm phần quà ngọt ngào đã được
+                                        trao tận tay các em nhỏ vùng sâu vùng xa, mang đến niềm vui và động lực học tập. Mỗi gói kẹo bạn gửi đi không chỉ là món quà vật chất mà còn là sự sẻ chia và
+                                        lan tỏa yêu thương từ K-Sweet.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav class="post__pagination">
+                                <ul class="post__pagination-list">
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#" aria-label="Previous">
+                                            <span class="post__pagination-link-prev">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="post__pagination-item post__pagination-item--active">
+                                        <a class="post__pagination-link" href="#">1</a>
+                                    </li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#">2</a>
+                                    </li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#">3</a>
+                                    </li>
+                                    <li class="post__pagination-item post__pagination-item--center">...</li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#">9</a>
+                                    </li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#">10</a>
+                                    </li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#">11</a>
+                                    </li>
+                                    <li class="post__pagination-item">
+                                        <a class="post__pagination-link" href="#" aria-label="Next">
+                                            <span class="post__pagination-link-next">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </article>
+
+                        <aside class="post__aside col-lg-3 col-md-3 col-sm-0">
+                            <div class="post__aside-top">
+                                <div class="post__aside-title">
+                                    <h3 class="post__aside-heading">Bài viết liên quan</h3>
+
+                                    <div class="post__aside-list">
+                                        <div class="post__aside-item post__aside-item--no-border">
+                                            <div class="post__aside-img-wrap">
+                                                <img src="../assets/images/child.webp" class="post__aside-img" />
+                                            </div>
+                                            <div class="post__aside-title">
+                                                <a href="#" class="post__aside-link">
+                                                    <h4 class="post__aside-link-heading">Góp kẹo cũ – Tặng nụ cười mới cho trẻ em vùng cao</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="post__aside-item post__aside-item--no-border">
+                                            <div class="post__aside-img-wrap">
+                                                <img src="../assets/images/cachsd.png" class="post__aside-img" />
+                                            </div>
+                                            <div class="post__aside-title">
+                                                <a href="#" class="post__aside-link">
+                                                    <h4 class="post__aside-link-heading">Hướng dẫn sử dụng mã giảm giá K-Sweet</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post__aside-bottom">
+                                <h3 class="post__aside-heading">Có thể bạn sẽ thích</h3>
+
+                                <div class="post__aside-list">
+                                    <div class="post__aside-item post__aside-item--border">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp7.webp" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Kẹo Mềm Trái cây Cheery Nho</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 16.000đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post__aside-item">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp8.jpg" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Bánh Hura Layercake Cốm</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 43.000đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post__aside-item">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp9.png" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Bánh Hỗn Hợp Goody Classic</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 77.000đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post__aside-item">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp9.png" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Bánh Jamy Nhân Mứt Cam</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 17.500đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post__aside-item">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp11.webp" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Kẹo Cứng Migita Bạc Hà</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 7.000đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post__aside-item">
+                                        <div class="post__aside-img-wrap">
+                                            <img src="../assets/images/sphot/sp12.webp" class="post__aside-img" />
+                                        </div>
+                                        <div class="post__aside-title">
+                                            <a href="#" class="post__aside-link">
+                                                <h4 class="post__aside-link-heading">Kẹo Cứng Welly Chanh</h4>
+                                            </a>
+
+                                            <div class="post__aside-rate-wrap">
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                                <i class="fas fa-star post__aside-rate"></i>
+                                            </div>
+
+                                            <div class="post__aside-price">
+                                                <span class="post__aside-price-current"> 6.000đ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+            <!--end posts -->
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-newsletter d-flex">
+                    <div class="footer-newsletter-left d-flex align-items-center">
+                        <h3>Đăng ký nhận tin</h3>
+                        <input type="text" placeholder="Nhập email của bạn" />
+                        <!-- <i class="bi bi-envelope"></i> -->
+                        <button type="button">Đăng ký</button>
+                    </div>
+                    <div class="footer-newsletter-right d-flex align-items-center">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <a href="#"><i class="bi bi-facebook text-dark"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark"></i></a>
+                        <a href="#"><i class="bi bi-youtube text-dark"></i></a>
+                    </div>
+                </div>
+                <div class="footer-expand-collapsed">
+                    <div class="item-1 p-4">
+                        <h4 style="font-weight: bold">CÔNG TY CỔ PHẦN K-SWEET</h4>
+                        <p class="m-0">
+                            Công ty cổ phần Bibica là một trong những công ty sản xuất và kinh doanh bánh kẹo hàng đầu tại Việt Nam, sở hữu nhiều thương hiệu sản phẩm chất lượng như: Hura, Goody,
+                            Quasure, Zoo, aHHa, Migita,...
+                        </p>
+                        <i class="fa fa-phone"></i> 0912345678 <br />
+                        <i class="fa fa-envelope"></i> banhang.online@ksweet.com.vn <br />
+                        <img src="../assets/images/img-bct-dathongbao.png" alt="" width="150" height="50" />
+                    </div>
+                    <div class="item-2 p-4">
+                        <h4 style="font-weight: bold">PHƯƠNG THỨC THANH TOÁN</h4>
+                        <div class="list-pay">
+                            <img src="../assets/images/icon-atm.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/icon-cash-f.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/icon-jcb-3.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/icon-mastercard-3.svg" alt="" width="55" height="55" /> <br />
+                            <img src="../assets/images/icon-momo-f.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/icon-visa-3.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/vnpay-f.svg" alt="" width="55" height="55" />
+                            <img src="../assets/images/zalopay-f.svg" alt="" width="55" height="55" />
+                        </div>
+                    </div>
+                    <div class="item-3 p-4">
+                        <h4 style="font-weight: bold">ĐƠN VỊ VẬN CHUYỂN</h4>
+                        <div class="list-transport">
+                            <img src="../assets/images/be.png" alt="" width="80" height="55" />
+                            <img src="../assets/images/express.png" alt="" width="80" height="55" />
+                            <img src="../assets/images/ahamove.png" alt="" width="80" height="55" /> <br />
+                            <img src="../assets/images/viettel.png" alt="" width="80" height="55" />
+                            <img src="../assets/images/spx.png" alt="" width="80" height="55" />
+                            <img src="../assets/images/ninja.png" alt="" width="80" height="55" /> <br />
+                            <img src="../assets/images/j&t.png" alt="" width="80" height="55" />
+                        </div>
+                    </div>
+                    <div class="item-4 p-4">
+                        <h4 style="font-weight: bold">LIÊN KẾT</h4>
+                        <ul>
+                            <li><a href="../pages/index.html">Trang Chủ</a></li>
+                            <li><a href="../pages/about.html">Về K-Sweet</a></li>
+                            <li><a href="../pages/products.html">Sản Phẩm</a></li>
+                            <li><a href="../pages/post.html">Bài viết</a></li>
+                            <li><a href="../pages/contact.html">Liên Hệ</a></li>
+                            <li><a href="../pages/sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright d-flex justify-content-center align-items-center">
+                    <p>Copyright &copy; 2023 - Bản quyền của Bán hàng Online K-Sweet</p>
+                </div>
+            </div>
+            <!-- End Footer -->
+        </div>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/script.js"></script>
+    </body>
+</html>
