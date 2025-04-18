@@ -77,8 +77,8 @@
                         <a href="../pages/register.html" class="sel-item">Đăng ký</a>
                     </div>
                     <div class="form-item d-flex flex-column justify-content-center align-items-center">
-                        <input type="text" placeholder="Vui lòng nhập email của bạn" />
-                        <input type="password" placeholder="Vui lòng nhập mật khẩu" />
+                        <input id="loginEmail" type="text" placeholder="Vui lòng nhập email của bạn" />
+                        <input id="loginPassword" type="password" placeholder="Vui lòng nhập mật khẩu" />
                     </div>
                     <div class="d-flex justify-content-center align-items-center flex-column">
                         <p>
@@ -87,7 +87,7 @@
                         </p>
                     </div>
                     <div class="form-action d-flex justify-content-center align-items-center flex-column">
-                        <button type="button">ĐĂNG NHẬP</button>
+                        <button id="loginBtn" type="button">ĐĂNG NHẬP</button>
                         <p class="m-3">Bạn chưa có tài khoản? <a href="../pages/register.html">Đăng ký</a></p>
                         <p class="m-0">Bạn quên mật khẩu? <a href="#">Quên mật khẩu</a></p>
                     </div>
@@ -163,5 +163,32 @@
         </div>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
+        <script>
+            document.getElementById('loginBtn').addEventListener('click', handleLogin);
+            function handleLogin() {
+                const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+                const password = document.getElementById('loginPassword').value;
+                if (!email || !password) {
+                    alert("Vui lòng nhập email và mật khẩu!");
+                    return;
+                }
+                const users = JSON.parse(localStorage.getItem('users')) || {};
+                if (!users[email]) {
+                    alert("Tài khoản không tồn tại!");
+                    return;
+                }
+                // if (users[email].password !== password) {
+                if (users[email].password !== btoa(password)) {
+                    // If you used btoa to save the password:
+                    alert("Mật khẩu không đúng!");
+                    return;
+                }
+                // Save login state (optional)
+                localStorage.setItem('loggedInUser', email);
+                alert("Đăng nhập thành công!");
+                // Redirect to homepage or dashboard
+                window.location.href = "../pages/index.html";
+            }
+        </script>
     </body>
 </html>
