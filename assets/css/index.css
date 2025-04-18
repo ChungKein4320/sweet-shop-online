@@ -317,7 +317,7 @@ product {
 }
 
 .btn-add-to-cart {
-    background-color: #AD211E;
+    background-color: #e04345;
     color: white;
     padding: 6px 10px;
     border: none;
@@ -330,7 +330,7 @@ product {
 }
 
 .btn-add-to-cart:hover {
-    background-color: #e04345;
+    background-color: #AD211E;
 }
 
 .product__sidebar-img-wrap {

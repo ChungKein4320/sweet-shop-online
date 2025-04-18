@@ -98,7 +98,7 @@
                             <div class="bestselling__product-text">
                                 <h3 class="bestselling__product-title">
                                     <a href="#" class="bestselling__product-link">Bánh Goody Chip Socola</a>
-                                </h3> 
+                                </h3>
 
                                 <span class="bestselling__product-price"> 43.000đ </span>
 
@@ -222,9 +222,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Kẹo Mềm Trái cây Cheery Nho" data-price="16000" data-image="../assets/images/sphot/sp7.webp">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
 
@@ -241,9 +239,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Bánh Hura Layercake Cốm" data-price="43000" data-image="../assets/images/sphot/sp8.jpg">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
 
@@ -260,9 +256,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Bánh Hỗn Hợp Goody Classic" data-price="77000" data-image="../assets/images/sphot/sp9.png">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
                         <div class="product__panel-item col-lg-2 col-md-3 col-sm-6">
@@ -278,9 +272,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Bánh Jamy Nhân Mứt Cam" data-price="17500" data-image="../assets/images/sphot/sp10.webp">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
 
@@ -297,9 +289,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Kẹo Cứng Migita Bạc Hà" data-price="7000" data-image="../assets/images/sphot/sp11.webp">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
 
@@ -308,7 +298,7 @@
                                 <img src="../assets/images/sphot/sp12.webp" alt="" class="product__panel-img" width="200px" />
                             </div>
                             <h3 class="product__panel-heading">
-                                <a href="#" class="product__panel-link">Kẹo Cứng Welly Chanh </a>
+                                <a href="#" class="product__panel-link">Kẹo Cứng Welly Chanh</a>
                             </h3>
 
                             <div class="product__panel-price">
@@ -316,9 +306,7 @@
                             </div>
 
                             <div class="product__panel-cart">
-                                <button class="btn btn-add-to-cart">
-                                    Thêm vào giỏ 🛒
-                                </button>
+                                <button class="btn btn-add-to-cart" data-name="Kẹo Cứng Welly Chanh" data-price="6000" data-image="../assets/images/sphot/sp12.webp">Thêm vào giỏ 🛒</button>
                             </div>
                         </div>
                     </div>
@@ -398,32 +386,7 @@
         </div>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const loggedInEmail = localStorage.getItem('loggedInUser');
-                const users = JSON.parse(localStorage.getItem('users') || '{}');
-                if (loggedInEmail && users[loggedInEmail]) {
-                    const user = users[loggedInEmail];
-                    const fullName = `${user.firstName || ''} ${user.lastName || ''}`.trim();
-                    const userLink = document.getElementById('user');
-                    const userLabel = document.getElementById('userLabel');
-                    if (userLabel && userLink) {
-                        userLabel.textContent = `Chào ${fullName}`;
-                        userLink.href = "#";
-                        userLink.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            if (confirm("Bạn có muốn đăng xuất không?")) {
-                                localStorage.removeItem('loggedInUser');
-                                window.location.reload();
-                            }
-                        });
-                    } else {
-                        console.warn("User elements not found in the DOM");
-                    }
-                } else {
-                    console.log("User not logged in or missing user data");
-                }
-            });
-        </script>
+        <script src="../assets/js/auth-display.js"></script>
+        <script src="../assets/js/add-to-cart.js"></script>
     </body>
 </html>

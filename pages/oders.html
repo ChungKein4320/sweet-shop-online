@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thanh toán - Sweet shop</title>
+        <title>Đơn hàng của bạn - Sweet shop</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../assets/css/all.min.css" />
@@ -72,35 +72,9 @@
             </div>
             <!-- End Header -->
 
-            <div class="container py-5">
-                <h2 class="text-center mb-4">Thanh toán đơn hàng</h2>
-
-                <!-- Hiển thị giỏ hàng -->
-                <div id="checkoutCart" class="mb-5"></div>
-
-                <!-- Thông tin người nhận -->
-                <h4>Thông tin giao hàng</h4>
-                <form id="checkoutForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Họ và tên</label>
-                        <input type="text" class="form-control" id="name" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Số điện thoại</label>
-                        <input type="tel" class="form-control" id="phone" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="address" class="form-label">Địa chỉ nhận hàng</label>
-                        <textarea class="form-control" id="address" rows="3" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="note" class="form-label">Ghi chú (nếu có)</label>
-                        <textarea class="form-control" id="note" rows="2"></textarea>
-                    </div>
-                    <div class="text-end">
-                        <button type="submit" class="btn btn-success">Xác nhận đặt hàng</button>
-                    </div>
-                </form>
+            <div class="container py-4 mt-4" style="background-color: #EFF0F3;">
+                <h2 class="text-center mb-4">Đơn hàng của bạn</h2>
+                <div id="orderList"></div>
             </div>
 
             <div class="footer">
@@ -174,6 +148,6 @@
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
         <script src="../assets/js/auth-display.js"></script>
-        <script src="../assets/js/checkout.js"></script>
+        <script src="../assets/js/orders.js"></script>
     </body>
 </html>
