@@ -130,7 +130,8 @@
 }
 
 .form-item input:not(.gender) {
-    width: 800px;
+    width: 80%;
+    max-width: 700px; /* to maintain a readable width */
     height: 55px;
     margin: 20px;
     background-color: #ededed;
