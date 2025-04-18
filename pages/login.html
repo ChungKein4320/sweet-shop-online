@@ -89,7 +89,7 @@
                     <div class="form-action d-flex justify-content-center align-items-center flex-column">
                         <button id="loginBtn" type="button">ĐĂNG NHẬP</button>
                         <p class="m-3">Bạn chưa có tài khoản? <a href="../pages/register.html">Đăng ký</a></p>
-                        <p class="m-0">Bạn quên mật khẩu? <a href="#">Quên mật khẩu</a></p>
+                        <p class="m-0">Bạn quên mật khẩu? <a href="#" id="forgotPasswordLink">Quên mật khẩu</a></p>
                     </div>
                 </div>
             </div>
@@ -177,9 +177,10 @@
                     alert("Tài khoản không tồn tại!");
                     return;
                 }
-                // if (users[email].password !== password) {
-                if (users[email].password !== btoa(password)) {
-                    // If you used btoa to save the password:
+                // If you used btoa to save the password:
+                // if (users[email].password !== btoa(password)) {
+                // If not 
+                if (users[email].password !== password) {
                     alert("Mật khẩu không đúng!");
                     return;
                 }
@@ -201,6 +202,36 @@
                     handleLogin(); // Call the same login function
                 }
             });
+        </script>
+        <script>
+            // Forgot-password handler with hidden password hint
+            document.getElementById('forgotPasswordLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                const email = prompt("Vui lòng nhập email để khôi phục mật khẩu:");
+                if (!email) {
+                    alert("Bạn chưa nhập email.");
+                    return;
+                }
+                const users = JSON.parse(localStorage.getItem('users') || '{}');
+                const user = users[email];
+                if (user) {
+                    // For safety, let's not show the full password
+                    // alert(`Mật khẩu của bạn là: ${user.password}`);
+                    alert(`Mật khẩu của bạn là: ${getPasswordHint(user.password)}`);
+                } else {
+                    alert("Không tìm thấy email này trong hệ thống.");
+                }
+            });
+            // Create a masked hint: show first 2 and last 2 characters
+            function getPasswordHint(password) {
+                if (password.length <= 4) {
+                    return '*'.repeat(password.length); // Fully masked if too short
+                }
+                const first = password.slice(0, 2);
+                const last = password.slice(-2);
+                const masked = '*'.repeat(password.length - 4);
+                return `${first}${masked}${last}`;
+            }
         </script>
     </body>
 </html>

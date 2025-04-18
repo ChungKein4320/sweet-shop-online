@@ -203,7 +203,10 @@
                     return;
                 }
                 // Save user to localStorage
-                users[email] = { firstName, lastName, dob, gender, password: encryptPassword(password) };
+                // We can use encrypted password but we cannot show it when user forgot password
+                // Hence we use plain password here
+                // users[email] = { firstName, lastName, dob, gender, password: encryptPassword(password) };
+                users[email] = { firstName, lastName, dob, gender, password: password};
                 localStorage.setItem('users', JSON.stringify(users));
                 alert("Đăng ký thành công!");
                 // Optionally redirect to login page
