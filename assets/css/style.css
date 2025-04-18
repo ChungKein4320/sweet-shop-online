@@ -130,7 +130,8 @@
 }
 
 .form-item input:not(.gender) {
-    width: 800px;
+    width: 80%;
+    max-width: 700px; /* to maintain a readable width */
     height: 55px;
     margin: 20px;
     background-color: #ededed;
@@ -242,7 +243,9 @@ h3 {
 }
 
 .radio {
-    width: 90%;
+    width: 80%; /* Match the other input width */
+    max-width: 700px;
+    margin: 20px; /* Same as the other email input */
     display: flex;
     align-items: center;
 }
