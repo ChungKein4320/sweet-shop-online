@@ -243,7 +243,9 @@ h3 {
 }
 
 .radio {
-    width: 90%;
+    width: 80%; /* Match the other input width */
+    max-width: 700px;
+    margin: 20px; /* Same as the other email input */
     display: flex;
     align-items: center;
 }
