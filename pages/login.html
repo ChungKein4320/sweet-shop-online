@@ -190,5 +190,17 @@
                 window.location.href = "../pages/index.html";
             }
         </script>
+        <script>
+            // Trigger login when pressing Enter
+            document.addEventListener("keydown", function(event) {
+                const emailInput = document.getElementById('loginEmail');
+                const passwordInput = document.getElementById('loginPassword');
+                const isEmailFocused = document.activeElement === emailInput;
+                const isPasswordFocused = document.activeElement === passwordInput;
+                if ((isEmailFocused || isPasswordFocused) && event.key === "Enter") {
+                    handleLogin(); // Call the same login function
+                }
+            });
+        </script>
     </body>
 </html>
