@@ -85,7 +85,7 @@
                             <input class="gender" type="radio" id="female" name="gender" value="Nữ" />
                             <label for="female">Nữ</label>
                         </div>
-                        <input id="dob" type="text" placeholder="dd/mm/yyyy" />
+                        <input id="dob" type="date" placeholder="dd/mm/yyyy" />
                         <input id="email" type="email" placeholder="Email" />
                         <input id="password" type="password" placeholder="Mật khẩu" />
                     </div>
@@ -188,6 +188,10 @@
                     alert("Email không hợp lệ!");
                     return;
                 }
+                if (!isValidDOB(dob)) {
+                    alert("Ngày sinh không hợp lệ hoặc bạn chưa đủ 18 tuổi!");
+                    return;
+                }
                 if (password.length < 6) {
                     alert("Mật khẩu phải từ 6 ký tự trở lên!");
                     return;
@@ -199,7 +203,7 @@
                     return;
                 }
                 // Save user to localStorage
-                users[email] = { firstName, lastName, dob, gender, password };
+                users[email] = { firstName, lastName, dob, gender, password: encryptPassword(password) };
                 localStorage.setItem('users', JSON.stringify(users));
                 alert("Đăng ký thành công!");
                 // Optionally redirect to login page
@@ -208,6 +212,27 @@
             function validateEmail(email) {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return re.test(email);
+            }
+            function isValidDOB(dobString) {
+                const dob = new Date(dobString);
+                const today = new Date();
+                if (dob >= today) return false;
+                // Check if at least 18 years old
+                const age = today.getFullYear() - dob.getFullYear();
+                if (age < 18 || today < new Date(dob.setFullYear(dob.getFullYear() + 18))) {
+                    return false;
+                }
+                return true;
+            }
+            // If you want some minimal security even in localStorage:
+            function encryptPassword(password) {
+                return btoa(password); // Base64 encode
+            }
+        </script>
+        <script>
+            function togglePassword() {
+                const input = document.getElementById("password");
+                input.type = input.type === "password" ? "text" : "password";
             }
         </script>
     </body>
