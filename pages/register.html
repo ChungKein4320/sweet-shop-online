@@ -77,17 +77,17 @@
                         <a href="../pages/register.html" class="sel-item active">Đăng ký</a>
                     </div>
                     <div class="form-item d-flex flex-column justify-content-center align-items-center">
-                        <input type="text" placeholder="Họ" />
-                        <input type="text" placeholder="Tên" />
+                        <input id="firstName" type="text" placeholder="Họ" />
+                        <input id="lastName" type="text" placeholder="Tên" />
                         <div class="radio">
                             <input class="gender" type="radio" id="male" name="gender" value="Nam" />
                             <label for="male">Nam</label>
                             <input class="gender" type="radio" id="female" name="gender" value="Nữ" />
                             <label for="female">Nữ</label>
                         </div>
-                        <input type="text" placeholder="dd/mm/yyyy" />
-                        <input type="text" placeholder="Email" />
-                        <input type="text" placeholder="Mật khẩu" />
+                        <input id="dob" type="text" placeholder="dd/mm/yyyy" />
+                        <input id="email" type="email" placeholder="Email" />
+                        <input id="password" type="password" placeholder="Mật khẩu" />
                     </div>
                     <div class="d-flex justify-content-center align-items-center flex-column">
                         <p>
@@ -96,7 +96,7 @@
                         </p>
                     </div>
                     <div class="form-action d-flex justify-content-center align-items-center flex-column">
-                        <button type="button">ĐĂNG KÝ</button>
+                        <button type="button" onclick="handleSignup()">ĐĂNG KÝ</button>
                         <p class="m-3">Bạn đã có tài khoản? <a href="../pages/login.html">Đăng nhập ngay</a></p>
                     </div>
                 </div>
@@ -171,5 +171,44 @@
         </div>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
+        <script>
+            function handleSignup() {
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const dob = document.getElementById('dob').value.trim();
+                const email = document.getElementById('email').value.trim().toLowerCase();
+                const password = document.getElementById('password').value;
+                const gender = document.querySelector('input[name="gender"]:checked')?.value;
+                // Basic validation
+                if (!firstName || !lastName || !dob || !email || !password || !gender) {
+                    alert("Vui lòng điền đầy đủ thông tin!");
+                    return;
+                }
+                if (!validateEmail(email)) {
+                    alert("Email không hợp lệ!");
+                    return;
+                }
+                if (password.length < 6) {
+                    alert("Mật khẩu phải từ 6 ký tự trở lên!");
+                    return;
+                }
+                // Check if user already exists
+                let users = JSON.parse(localStorage.getItem('users')) || {};
+                if (users[email]) {
+                    alert("Email đã tồn tại!");
+                    return;
+                }
+                // Save user to localStorage
+                users[email] = { firstName, lastName, dob, gender, password };
+                localStorage.setItem('users', JSON.stringify(users));
+                alert("Đăng ký thành công!");
+                // Optionally redirect to login page
+                window.location.href = '../pages/login.html';
+            }
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        </script>
     </body>
 </html>
