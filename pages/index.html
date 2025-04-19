@@ -53,7 +53,7 @@
                                 <span class="p-2" id="userLabel">Đăng nhập / Đăng ký</span>
                             </a>
                             <div id="dropdownMenu" class="dropdown-menu">
-                                <div class="dropdown-item" id="viewCart">Xem giỏ hàng</div>
+                                <div class="dropdown-item" id="viewOder">Xem đơn hàng</div>
                                 <div class="dropdown-item" id="logout">Đăng Xuất</div>
                             </div>
                         </div>
@@ -109,7 +109,15 @@
                                 <span class="bestselling__product-price"> 43.000đ </span>
 
                                 <div class="bestselling__product-btn-wrap">
-                                    <button class="bestselling__product-btn">Xem hàng</button>
+                                    <button
+                                        class="bestselling__product-btn view-detail"
+                                        data-name="Bánh Goody Chip Socola"
+                                        data-price="43000"
+                                        data-image="../assets/images/sphot/sp1.webp"
+                                        data-description="Vị socola thơm ngon, giòn rụm, phù hợp mọi lứa tuổi."
+                                    >
+                                        Xem hàng
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -390,47 +398,37 @@
             </div>
             <!-- End Footer -->
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="productDetailModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProductName">Tên sản phẩm</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 2rem;">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-5">
+                            <img id="modalProductImage" src="" class="img-fluid rounded" alt="..." />
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-danger" id="modalProductPrice">0đ</h4>
+                            <p id="modalProductDesc">Mô tả sản phẩm</p>
+                            <button class="btn btn-danger" id="modalAddToCart">Thêm vào giỏ hàng 🛒</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal chi tiết sản phẩm -->
+
+        <script src="../assets/js/jquery-3.7.1.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
         <script src="../assets/js/auth-display.js"></script>
         <script src="../assets/js/add-to-cart.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const loggedInEmail = localStorage.getItem('loggedInUser');
-                const users = JSON.parse(localStorage.getItem('users') || '{}');
-                const userContainer = document.getElementById('userContainer');
-                const userLink = document.getElementById('user');
-                const userLabel = document.getElementById('userLabel');
-                const dropdownMenu = document.getElementById('dropdownMenu');
-                const logoutBtn = document.getElementById('logout');
-                const viewCartBtn = document.getElementById('viewCart');
-                if (loggedInEmail && users[loggedInEmail]) {
-                    const user = users[loggedInEmail];
-                    const fullName = `${user.firstName || ''} ${user.lastName || ''}`.trim();
-                    // Update UI
-                    userLabel.textContent = `Chào ${fullName}`;
-                    userLink.href = "#";
-                    userContainer.classList.add('logged-in');
-                    // Prevent link navigation
-                    userLink.addEventListener('click', (e) => e.preventDefault());
-                    // Logout logic
-                    logoutBtn.addEventListener('click', () => {
-                        if (confirm("Bạn có muốn đăng xuất không?")) {
-                            localStorage.removeItem('loggedInUser');
-                            window.location.reload();
-                        }
-                    });
-                    // View cart
-                    viewCartBtn.addEventListener('click', () => {
-                        window.location.href = "../pages/cart.html";
-                    });
-                } else {
-                    // Not logged in
-                    userLabel.textContent = "Đăng nhập / Đăng ký";
-                    userLink.href = "../pages/login.html";
-                    userContainer.classList.remove('logged-in');
-                }
-            });
-        </script>
+        <script src="../assets/js/view-detail-modal.js"></script>
     </body>
 </html>

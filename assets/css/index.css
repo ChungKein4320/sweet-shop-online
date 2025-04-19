@@ -208,7 +208,7 @@
     width: 10rem;
     height: 3rem;
     border-radius: 0.2rem;
-    background: #AD211E;
+    background: #ad211e;
     color: white;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@
 }
 
 .bestselling__product-btn:hover {
-    background: #D93932;
+    background: #d93932;
 }
 
 .bestselling__banner {
@@ -330,7 +330,7 @@ product {
 }
 
 .btn-add-to-cart:hover {
-    background-color: #AD211E;
+    background-color: #ad211e;
 }
 
 .product__sidebar-img-wrap {
@@ -429,7 +429,7 @@ product {
     width: 3.6rem;
     height: 3.6rem;
     border-radius: 50%;
-    background: #D93932;
+    background: #d93932;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,7 +515,7 @@ product {
 
 .product__panel-price-sale {
     font-size: 1.6rem;
-    color: #DA291C;
+    color: #da291c;
     font-weight: bold;
 }
 
@@ -533,7 +533,7 @@ section.product__love {
 
 .product__love-heading {
     font-size: 2rem;
-    color: #AD211E;
+    color: #ad211e;
     font-weight: bold;
     text-align: center;
 }

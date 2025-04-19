@@ -282,13 +282,12 @@ h3 {
     object-fit: cover;
 }
 
-
 .slide:first-child {
     display: block;
 }
 
 .section-1 {
-    background-color: #F6F3EA;
+    background-color: #f6f3ea;
 }
 
 .user-dropdown-container {
