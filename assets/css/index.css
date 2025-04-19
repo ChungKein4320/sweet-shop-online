@@ -208,7 +208,7 @@
     width: 10rem;
     height: 3rem;
     border-radius: 0.2rem;
-    background: #ad211e;
+    background: #D93932;
     color: white;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@
 }
 
 .bestselling__product-btn:hover {
-    background: #d93932;
+    background: #AD211E;
 }
 
 .bestselling__banner {
@@ -642,4 +642,14 @@ section.product__love {
     color: white;
     margin: 0 auto;
     line-height: 3.4rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
