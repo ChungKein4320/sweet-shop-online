@@ -12,7 +12,6 @@
     </head>
     <body>
         <div class="main-body">
-            <!-- Header -->
             <div class="header">
                 <header class="main-header p-3">
                     <div class="logo d-flex justify-content-center align-items-center">
@@ -28,15 +27,15 @@
                         <div class="policy-search">
                             <ul>
                                 <li>
-                                    <img src="../assets/images/header_03_policy_1_ico.webp" />
+                                    <img src="../assets/images/header_03_policy_1_ico.webp" alt="Đảm bảo chất lượng" />
                                     <span>Đảm bảo chất lượng</span>
                                 </li>
                                 <li>
-                                    <img src="../assets/images/header_03_policy_2_ico.webp" />
+                                    <img src="../assets/images/header_03_policy_2_ico.webp" alt="Hotline 0912345678" />
                                     <span>Hotline 0912345678</span>
                                 </li>
                                 <li>
-                                    <img src="../assets/images/header_03_policy_3_ico.webp" />
+                                    <img src="../assets/images/header_03_policy_3_ico.webp" alt="Mở hộp kiểm tra nhận hàng" />
                                     <span>Mở hộp kiểm tra nhận hàng</span>
                                 </li>
                             </ul>
@@ -47,10 +46,16 @@
                             <i class="bi bi-cart3"></i>
                             <span class="p-2">Giỏ hàng</span>
                         </a>
-                        <a href="../pages/login.html" id="user" class="icon" data-require-login="true">
-                            <i class="bi bi-person-circle"></i>
-                            <span class="p-2" id="userLabel">Đăng nhập / Đăng ký</span>
-                        </a>
+                        <div id="userContainer" class="user-dropdown-container">
+                            <a href="../pages/login.html" id="user" class="icon" data-require-login="true">
+                                <i class="bi bi-person-circle"></i>
+                                <span class="p-2" id="userLabel">Đăng nhập / Đăng ký</span>
+                            </a>
+                            <div id="dropdownMenu" class="dropdown-menu">
+                                <div class="dropdown-item" id="viewOder">Xem đơn hàng</div>
+                                <div class="dropdown-item" id="logout">Đăng Xuất</div>
+                            </div>
+                        </div>
                         <a href="#" id="notify" class="icon" data-require-login="true">
                             <i class="bi bi-bell"></i>
                             <span class="p-2">Thông báo</span>
@@ -70,9 +75,7 @@
                     </nav>
                 </div>
             </div>
-            <!-- End Header -->
 
-            <!-- Main Content -->
             <section class="about-section">
                 <h2 class="section-title">VỀ CHÚNG TÔI</h2>
                 <p class="intro">

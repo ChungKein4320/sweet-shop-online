@@ -11,7 +11,6 @@
     </head>
     <body>
         <div class="main-body">
-            <!-- Header -->
             <div class="header">
                 <header class="main-header p-3">
                     <div class="logo d-flex justify-content-center align-items-center">
@@ -69,7 +68,7 @@
                     </nav>
                 </div>
             </div>
-            <!-- End Header -->
+
             <div class="layout-account d-flex justify-content-center align-items-center flex-column">
                 <div class="form mt-5">
                     <div class="sel d-flex justify-content-center align-items-center mt-5">
@@ -179,7 +178,7 @@
                 const email = document.getElementById('email').value.trim().toLowerCase();
                 const password = document.getElementById('password').value;
                 const gender = document.querySelector('input[name="gender"]:checked')?.value;
-                // Basic validation
+   
                 if (!firstName || !lastName || !dob || !email || !password || !gender) {
                     alert("Vui lòng điền đầy đủ thông tin!");
                     return;
@@ -196,20 +195,17 @@
                     alert("Mật khẩu phải từ 6 ký tự trở lên!");
                     return;
                 }
-                // Check if user already exists
+
                 let users = JSON.parse(localStorage.getItem('users')) || {};
                 if (users[email]) {
                     alert("Email đã tồn tại!");
                     return;
                 }
-                // Save user to localStorage
-                // We can use encrypted password but we cannot show it when user forgot password
-                // Hence we use plain password here
-                // users[email] = { firstName, lastName, dob, gender, password: encryptPassword(password) };
+
                 users[email] = { firstName, lastName, dob, gender, password: password};
                 localStorage.setItem('users', JSON.stringify(users));
                 alert("Đăng ký thành công!");
-                // Optionally redirect to login page
+   
                 window.location.href = '../pages/login.html';
             }
             function validateEmail(email) {
@@ -220,16 +216,14 @@
                 const dob = new Date(dobString);
                 const today = new Date();
                 if (dob >= today) return false;
-                // Check if at least 18 years old
                 const age = today.getFullYear() - dob.getFullYear();
                 if (age < 18 || today < new Date(dob.setFullYear(dob.getFullYear() + 18))) {
                     return false;
                 }
                 return true;
             }
-            // If you want some minimal security even in localStorage:
             function encryptPassword(password) {
-                return btoa(password); // Base64 encode
+                return btoa(password); 
             }
         </script>
     </body>

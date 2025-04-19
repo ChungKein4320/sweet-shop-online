@@ -11,7 +11,6 @@
     </head>
     <body>
         <div class="main-body">
-            <!-- Header -->
             <div class="header">
                 <header class="main-header p-3">
                     <div class="logo d-flex justify-content-center align-items-center">
@@ -69,7 +68,6 @@
                     </nav>
                 </div>
             </div>
-            <!-- End Header -->
             <div class="layout-account d-flex justify-content-center align-items-center flex-column">
                 <div class="form mt-5">
                     <div class="sel d-flex justify-content-center align-items-center mt-5">
@@ -98,7 +96,6 @@
                     <div class="footer-newsletter-left d-flex align-items-center">
                         <h3>Đăng ký nhận tin</h3>
                         <input type="text" placeholder="Nhập email của bạn" />
-                        <!-- <i class="bi bi-envelope"></i> -->
                         <button type="button">Đăng ký</button>
                     </div>
                     <div class="footer-newsletter-right d-flex align-items-center">
@@ -164,72 +161,66 @@
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
         <script>
-            document.getElementById('loginBtn').addEventListener('click', handleLogin);
+            document.getElementById("loginBtn").addEventListener("click", handleLogin);
             function handleLogin() {
-                const email = document.getElementById('loginEmail').value.trim().toLowerCase();
-                const password = document.getElementById('loginPassword').value;
+                const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+                const password = document.getElementById("loginPassword").value;
                 if (!email || !password) {
                     alert("Vui lòng nhập email và mật khẩu!");
                     return;
                 }
-                const users = JSON.parse(localStorage.getItem('users')) || {};
+                const users = JSON.parse(localStorage.getItem("users")) || {};
                 if (!users[email]) {
                     alert("Tài khoản không tồn tại!");
                     return;
                 }
-                // If you used btoa to save the password:
-                // if (users[email].password !== btoa(password)) {
-                // If not 
+
                 if (users[email].password !== password) {
                     alert("Mật khẩu không đúng!");
                     return;
                 }
-                // Save login state (optional)
-                localStorage.setItem('loggedInUser', email);
-                // alert("Đăng nhập thành công!");
-                // Redirect to homepage or dashboard
+                localStorage.setItem("loggedInUser", email);
+
                 window.location.href = "../pages/index.html";
             }
         </script>
         <script>
-            // Trigger login when pressing Enter
-            document.addEventListener("keydown", function(event) {
-                const emailInput = document.getElementById('loginEmail');
-                const passwordInput = document.getElementById('loginPassword');
+            document.addEventListener("keydown", function (event) {
+                const emailInput = document.getElementById("loginEmail");
+                const passwordInput = document.getElementById("loginPassword");
                 const isEmailFocused = document.activeElement === emailInput;
                 const isPasswordFocused = document.activeElement === passwordInput;
                 if ((isEmailFocused || isPasswordFocused) && event.key === "Enter") {
-                    handleLogin(); // Call the same login function
+                    handleLogin(); 
                 }
             });
         </script>
         <script>
-            // Forgot-password handler with hidden password hint
-            document.getElementById('forgotPasswordLink').addEventListener('click', function(event) {
+
+            document.getElementById("forgotPasswordLink").addEventListener("click", function (event) {
                 event.preventDefault();
                 const email = prompt("Vui lòng nhập email để khôi phục mật khẩu:");
                 if (!email) {
                     alert("Bạn chưa nhập email.");
                     return;
                 }
-                const users = JSON.parse(localStorage.getItem('users') || '{}');
+                const users = JSON.parse(localStorage.getItem("users") || "{}");
                 const user = users[email];
                 if (user) {
-                    // For safety, let's not show the full password
-                    // alert(`Mật khẩu của bạn là: ${user.password}`);
+
                     alert(`Mật khẩu của bạn là: ${getPasswordHint(user.password)}`);
                 } else {
                     alert("Không tìm thấy email này trong hệ thống.");
                 }
             });
-            // Create a masked hint: show first 2 and last 2 characters
+
             function getPasswordHint(password) {
                 if (password.length <= 4) {
-                    return '*'.repeat(password.length); // Fully masked if too short
+                    return "*".repeat(password.length); 
                 }
                 const first = password.slice(0, 2);
                 const last = password.slice(-2);
-                const masked = '*'.repeat(password.length - 4);
+                const masked = "*".repeat(password.length - 4);
                 return `${first}${masked}${last}`;
             }
         </script>
