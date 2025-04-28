@@ -208,7 +208,7 @@
     width: 10rem;
     height: 3rem;
     border-radius: 0.2rem;
-    background: #D93932;
+    background: #d93932;
     color: white;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@
 }
 
 .bestselling__product-btn:hover {
-    background: #AD211E;
+    background: #ad211e;
 }
 
 .bestselling__banner {
@@ -253,9 +253,6 @@ product {
     padding: 3rem 0;
 }
 
-.product__sidebar {
-}
-
 .product__sidebar-heading {
     display: flex;
     align-items: center;
@@ -265,11 +262,6 @@ product {
     border-top-left-radius: 4px;
     margin-bottom: 2rem;
 }
-
-/*.product__sidebar-img {
-  width: 3rem;
-  height: 4rem;
-}*/
 
 .product__sidebar-title {
     font-size: 1.8rem;
@@ -282,9 +274,6 @@ product {
 
 .product__sidebar-list {
     background: white;
-    /*display: flex;
-  align-items: center;
-  justify-content: space-around;*/
     width: 100%;
     padding: 2rem 0.6rem;
 }
@@ -341,9 +330,6 @@ product {
     width: 100%;
 }
 
-.product__content {
-}
-
 .product__list {
     height: 4.2rem;
     list-style: none;
@@ -354,9 +340,6 @@ product {
     justify-content: flex-end;
     margin-bottom: 2rem;
     width: 100%;
-}
-
-.product__item {
 }
 
 .product__link {
@@ -519,8 +502,6 @@ product {
     font-weight: bold;
 }
 
-/*product love*/
-
 section.product__love {
     background: #efefef;
     padding-bottom: 2rem;
@@ -548,18 +529,9 @@ section.product__love {
     padding: 0 1.6rem;
 }
 
-/*.product__love .row{
-  background: var(--white-color);
-}*/
-
-/*footer*/
-
 .footer__top {
     background: #efefef;
     padding: 1.6rem 0;
-}
-
-.footer__top-intro {
 }
 
 .footer__top-intro-heading,
@@ -579,9 +551,6 @@ section.product__love {
     margin-bottom: 1rem;
 }
 
-.footer__top-policy-item {
-}
-
 .footer__top-policy-link {
     font-size: 1.5rem;
     color: black;
@@ -593,12 +562,6 @@ section.product__love {
     text-decoration: none;
 }
 
-.footer__top-contact-wrap {
-}
-
-.footer__top-contact-heading {
-}
-
 .footer__top-contact {
     display: flex;
     align-items: center;
@@ -607,12 +570,6 @@ section.product__love {
 
 .footer__top-contact-icon {
     margin-right: 2.6rem;
-}
-
-.footer__top-contact-img {
-}
-
-.footer__top-contact-phone-wrap {
 }
 
 .footer__top-contact-phone {
