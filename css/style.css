@@ -306,6 +306,7 @@ h3 {
     z-index: 1000;
     display: none;
     flex-direction: column;
+    padding: 0;
 }
 
 .dropdown-menu .dropdown-item {
@@ -323,7 +324,10 @@ h3 {
     background-color: #f0f0f0;
 }
 
-/* Only show dropdown on hover if user is logged in */
 .user-dropdown-container.logged-in:hover .dropdown-menu {
+    display: flex;
+}
+
+.user-dropdown-container.show .dropdown-menu {
     display: flex;
 }

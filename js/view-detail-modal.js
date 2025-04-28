@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const email = localStorage.getItem("loggedInUser");
                 if (!email) {
                     alert("Vui lòng đăng nhập trước khi thêm vào giỏ hàng.");
-                    window.location.href = "../pages/login.html";
+                    window.location.href = "../html/login.html";
                     return;
                 }
 

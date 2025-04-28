@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         // View cart
         viewOdertBtn.addEventListener("click", () => {
-            window.location.href = "../pages/oders.html";
+            window.location.href = "../html/oders.html";
         });
     } else {
         // Not logged in
         userLabel.textContent = "Đăng nhập / Đăng ký";
-        userLink.href = "../pages/login.html";
+        userLink.href = "../html/login.html";
         userContainer.classList.remove("logged-in");
     }
 });
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (loggedInUser) {
             // Nếu có loggedInUser => đã đăng nhập
-            window.location.href = "../pages/cart.html";
+            window.location.href = "../html/cart.html";
         } else {
             // Ngược lại thì chuyển sang đăng nhập
-            window.location.href = "../pages/login.html";
+            window.location.href = "../html/login.html";
         }
     });
 });

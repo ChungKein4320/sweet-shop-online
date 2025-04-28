@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 alert("Vui lòng đăng nhập trước khi thêm vào giỏ hàng!");
-                window.location.href = "../pages/login.html";
+                window.location.href = "../html/login.html";
             });
         });
         return;
