@@ -181,7 +181,6 @@
     height: 4.1rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
     transition: 0.2s;
@@ -387,9 +386,6 @@ product {
     display: block;
 }
 
-.row.product__panel-wrap {
-}
-
 .product__panel {
     display: flex;
     flex-wrap: wrap;
@@ -442,9 +438,6 @@ product {
     transform: scale(1.1);
 }
 
-.product__panel-heading {
-}
-
 .product__panel-link {
     font-size: 1rem;
     color: black;
@@ -456,7 +449,6 @@ product {
     height: 3.8rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
     height: 30px;
@@ -608,5 +600,5 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }

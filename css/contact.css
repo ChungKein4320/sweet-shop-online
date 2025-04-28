@@ -14,7 +14,7 @@
 }
 
 .contact {
-    background-color: #EFF0F3;
+    background-color: #eff0f3;
     padding: 15px;
     margin-top: 30px;
 }
@@ -61,7 +61,7 @@
 
 .contact__regist form button {
     font-size: 1.4rem;
-    background: #D93932;
+    background: #d93932;
     padding: 0.6rem 1.4rem;
     outline: none;
     color: white;
@@ -82,7 +82,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .pc {

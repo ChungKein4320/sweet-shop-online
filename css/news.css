@@ -35,9 +35,6 @@
     flex: 1;
 }
 
-.post__item-title {
-}
-
 .post__item-link {
     color: black;
     text-decoration: none;
@@ -85,7 +82,7 @@
     color: black;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    /* -webkit-line-clamp: 5; */
     text-overflow: ellipsis;
     overflow: hidden;
     text-indent: 1.6rem;
@@ -211,7 +208,7 @@
     font-weight: 400;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2; */
     text-overflow: ellipsis;
     overflow: hidden;
     transition: 0.2s;
