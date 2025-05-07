@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Đăng nhập - Sweet shop</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/all.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../css/index.css" />
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="header">
+                <header class="main-header p-3">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <img src="../images/logo.jpg" alt="Bán hàng Online K-Sweet" class="rounded-circle width-110px" />
+                    </div>
+                    <div class="mid-action d-flex flex-column justify-content-center align-items-center">
+                        <div class="search-bar input-group w-75 mb-2 position-relative">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm sản phẩm..." autocomplete="off" />
+                            <button class="btn search-btn" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+
+                            <!-- Dropdown kết quả tìm kiếm -->
+                            <div id="searchResults" class="list-group position-absolute w-100" style="top: 100%; margin-top: 2px; z-index: 1000; display: none"></div>
+                        </div>
+                        <div class="policy-search">
+                            <ul>
+                                <li>
+                                    <img src="../images/header_03_policy_1_ico.webp" />
+                                    <span>Đảm bảo chất lượng</span>
+                                </li>
+                                <li>
+                                    <img src="../images/header_03_policy_2_ico.webp" />
+                                    <span>Hotline 0912345678</span>
+                                </li>
+                                <li>
+                                    <img src="../images/header_03_policy_3_ico.webp" />
+                                    <span>Mở hộp kiểm tra nhận hàng</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-action d-flex align-items-center gap-3">
+                        <a href="../html/cart.html" id="cart" class="icon" data-require-login="true">
+                            <i class="bi bi-cart3"></i>
+                            <span class="p-2">Giỏ hàng</span>
+                        </a>
+                        <a href="../html/login.html" id="user" class="icon" data-require-login="true">
+                            <i class="bi bi-person-circle"></i>
+                            <span class="p-2">Đăng nhập / Đăng ký</span>
+                        </a>
+                        <a href="#" id="notify" class="icon" data-require-login="true">
+                            <i class="bi bi-bell"></i>
+                            <span class="p-2">Thông báo</span>
+                        </a>
+                    </div>
+                </header>
+                <div class="nav d-flex justify-content-center align-items-center">
+                    <nav class="menu">
+                        <ul class="d-flex justify-content-center align-items-center">
+                            <li><a href="../html/index.html">TRANG CHỦ</a></li>
+                            <li><a href="../html/about.html">VỀ K-SWEET</a></li>
+                            <li><a href="../html/products.html">SẢN PHẨM</a></li>
+                            <li><a href="../html/news.html">TIN TỨC</a></li>
+                            <li><a href="../html/contact.html">LIÊN HỆ</a></li>
+                            <li><a href="../html/sitemap.html">SITEMAP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Chi tiết sản phẩm -->
+            <div class="container my-5">
+                <div class="row">
+                    <!-- Hình ảnh sản phẩm -->
+                    <div class="col-md-5">
+                        <img src="../images/cake/sp1.webp" alt="Bánh Hura Layercake Dâu" class="img-fluid rounded" />
+                    </div>
+
+                    <!-- Thông tin sản phẩm -->
+                    <div class="col-md-7">
+                        <h2 class="mb-3">Bánh Hura Layercake Dâu</h2>
+                        <p><strong>Giá:</strong> <span class="text-danger fs-4 fw-bold">42.000đ</span></p>
+                        <p>
+                            <strong>Mô tả:</strong> Bánh bông lan Hura Layer Cake Dâu Bibica với cốt bánh bông lan mềm xốp, hòa cùng lớp kem bơ sữa thơm béo, ít ngọt, cho bạn một món bánh tròn vị, hấp
+                            dẫn. Sản phẩm Bánh bông lan Hura Layer Cake được đóng gói theo từng cái, tiện lợi khi mang theo đi học, đi làm hoặc đi chơi. Sản phẩm được sản xuất trên công nghệ và dây
+                            chuyền thiết bị hiện đại của Châu Âu. Đạt tiêu chuẩn HACCP, đảm bảo các chỉ tiêu về vệ sinh an toàn thực phẩm.
+                        </p>
+                        <p><strong>Thành phần:</strong> Bột mì, trứng, đường, sữa, hương dâu tự nhiên.</p>
+                        <p><strong>Hạn sử dụng:</strong> 6 tháng kể từ ngày sản xuất.</p>
+                        <p><strong>Khối lượng:</strong> 276g</p>
+
+                        <!-- Nút thêm vào giỏ -->
+                        <button class="btn btn-success btn-add-to-cart" data-name="Bánh Hura Layercake Dâu" data-price="42000" data-image="../images/cake/sp1.webp">🛒 Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-newsletter d-flex">
+                    <div class="footer-newsletter-left d-flex align-items-center">
+                        <h3>Đăng ký nhận tin</h3>
+                        <input type="text" placeholder="Nhập email của bạn" />
+                        <button type="button">Đăng ký</button>
+                    </div>
+                    <div class="footer-newsletter-right d-flex align-items-center">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <a href="#"><i class="bi bi-facebook text-dark"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-dark"></i></a>
+                        <a href="#"><i class="bi bi-youtube text-dark"></i></a>
+                    </div>
+                </div>
+                <div class="footer-expand-collapsed">
+                    <div class="item-1 p-4">
+                        <h4 style="font-weight: bold">CÔNG TY CỔ PHẦN K-SWEET</h4>
+                        <p class="m-0">
+                            Công ty cổ phần Bibica là một trong những công ty sản xuất và kinh doanh bánh kẹo hàng đầu tại Việt Nam, sở hữu nhiều thương hiệu sản phẩm chất lượng như: Hura, Goody,
+                            Quasure, Zoo, aHHa, Migita,...
+                        </p>
+                        <i class="fa fa-phone"></i> 0912345678 <br />
+                        <i class="fa fa-envelope"></i> banhang.online@ksweet.com.vn <br />
+                        <img src="../images/img-bct-dathongbao.png" alt="" width="150" height="50" />
+                    </div>
+                    <div class="item-2 p-4">
+                        <h4 style="font-weight: bold">PHƯƠNG THỨC THANH TOÁN</h4>
+                        <div class="list-pay">
+                            <img src="../images/icon-atm.svg" alt="" width="55" height="55" />
+                            <img src="../images/icon-cash-f.svg" alt="" width="55" height="55" />
+                            <img src="../images/icon-jcb-3.svg" alt="" width="55" height="55" />
+                            <img src="../images/icon-mastercard-3.svg" alt="" width="55" height="55" /> <br />
+                            <img src="../images/icon-momo-f.svg" alt="" width="55" height="55" />
+                            <img src="../images/icon-visa-3.svg" alt="" width="55" height="55" />
+                            <img src="../images/vnpay-f.svg" alt="" width="55" height="55" />
+                            <img src="../images/zalopay-f.svg" alt="" width="55" height="55" />
+                        </div>
+                    </div>
+                    <div class="item-3 p-4">
+                        <h4 style="font-weight: bold">ĐƠN VỊ VẬN CHUYỂN</h4>
+                        <div class="list-transport">
+                            <img src="../images/be.png" alt="" width="80" height="55" />
+                            <img src="../images/express.png" alt="" width="80" height="55" />
+                            <img src="../images/ahamove.png" alt="" width="80" height="55" /> <br />
+                            <img src="../images/viettel.png" alt="" width="80" height="55" />
+                            <img src="../images/spx.png" alt="" width="80" height="55" />
+                            <img src="../images/ninja.png" alt="" width="80" height="55" /> <br />
+                            <img src="../images/j&t.png" alt="" width="80" height="55" />
+                        </div>
+                    </div>
+                    <div class="item-4 p-4">
+                        <h4 style="font-weight: bold">LIÊN KẾT</h4>
+                        <ul>
+                            <li><a href="../html/index.html">Trang Chủ</a></li>
+                            <li><a href="../html/about.html">Về K-Sweet</a></li>
+                            <li><a href="../html/products.html">Sản Phẩm</a></li>
+                            <li><a href="../html/news.html">Tin tức</a></li>
+                            <li><a href="../html/contact.html">Liên Hệ</a></li>
+                            <li><a href="../html/sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright d-flex justify-content-center align-items-center">
+                    <p>Copyright &copy; 2023 - Bản quyền của Bán hàng Online K-Sweet</p>
+                </div>
+            </div>
+        </div>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/add-to-cart.js"></script>
+    </body>
+</html>
