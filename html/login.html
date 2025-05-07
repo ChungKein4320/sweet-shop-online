@@ -17,11 +17,14 @@
                         <img src="../images/logo.jpg" alt="Bán hàng Online K-Sweet" class="rounded-circle width-110px" />
                     </div>
                     <div class="mid-action d-flex flex-column justify-content-center align-items-center">
-                        <div class="search-bar input-group w-75 mb-2">
-                            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                        <div class="search-bar input-group w-75 mb-2 position-relative">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm sản phẩm..." autocomplete="off" />
                             <button class="btn search-btn" type="button">
                                 <i class="fa fa-search"></i>
                             </button>
+
+                            <!-- Dropdown kết quả tìm kiếm -->
+                            <div id="searchResults" class="list-group position-absolute w-100" style="top: 100%; margin-top: 2px; z-index: 1000; display: none"></div>
                         </div>
                         <div class="policy-search">
                             <ul>
@@ -191,12 +194,11 @@
                 const isEmailFocused = document.activeElement === emailInput;
                 const isPasswordFocused = document.activeElement === passwordInput;
                 if ((isEmailFocused || isPasswordFocused) && event.key === "Enter") {
-                    handleLogin(); 
+                    handleLogin();
                 }
             });
         </script>
         <script>
-
             document.getElementById("forgotPasswordLink").addEventListener("click", function (event) {
                 event.preventDefault();
                 const email = prompt("Vui lòng nhập email để khôi phục mật khẩu:");
@@ -207,7 +209,6 @@
                 const users = JSON.parse(localStorage.getItem("users") || "{}");
                 const user = users[email];
                 if (user) {
-
                     alert(`Mật khẩu của bạn là: ${getPasswordHint(user.password)}`);
                 } else {
                     alert("Không tìm thấy email này trong hệ thống.");
@@ -216,7 +217,7 @@
 
             function getPasswordHint(password) {
                 if (password.length <= 4) {
-                    return "*".repeat(password.length); 
+                    return "*".repeat(password.length);
                 }
                 const first = password.slice(0, 2);
                 const last = password.slice(-2);

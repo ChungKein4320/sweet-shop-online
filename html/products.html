@@ -18,11 +18,14 @@
                         <img src="../images/logo.jpg" alt="Bán hàng Online K-Sweet" class="rounded-circle width-110px" />
                     </div>
                     <div class="mid-action d-flex flex-column justify-content-center align-items-center">
-                        <div class="search-bar input-group w-75 mb-2">
-                            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                        <div class="search-bar input-group w-75 mb-2 position-relative">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm sản phẩm..." autocomplete="off" />
                             <button class="btn search-btn" type="button">
                                 <i class="fa fa-search"></i>
                             </button>
+
+                            <!-- Dropdown kết quả tìm kiếm -->
+                            <div id="searchResults" class="list-group position-absolute w-100" style="top: 100%; margin-top: 2px; z-index: 1000; display: none"></div>
                         </div>
                         <div class="policy-search">
                             <ul>
@@ -89,7 +92,7 @@
                                 <img src="../images/cake/sp1.webp" alt="" class="product__panel-img" />
                             </div>
                             <h3 class="product__panel-heading">
-                                <a href="#" class="product__panel-link">Bánh Hura Layercake Dâu </a>
+                                <a href="../html/product-detail.html" class="product__panel-link">Bánh Hura Layercake Dâu </a>
                             </h3>
 
                             <div class="product__panel-price">
