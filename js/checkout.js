@@ -72,5 +72,5 @@ document.getElementById("checkoutForm").addEventListener("submit", function (e) 
     localStorage.removeItem(cartKey);
 
     alert("Đặt hàng thành công!");
-    window.location.href = "../pages/index.html"; 
+    window.location.href = "../html/index.html";
 });
